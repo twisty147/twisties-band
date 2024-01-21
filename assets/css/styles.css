@@ -1,0 +1,20 @@
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #FFFF00; /* Yellow color */
+}
+
+.navbar-brand {
+ 
+  color: #FFFF00;
+  
+}
+.nav-link:hover {
+  color: #FFFF00;
+  }
