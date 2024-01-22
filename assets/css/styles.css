@@ -7,14 +7,248 @@
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-    color: #FFFF00; /* Yellow color */
+  color: #FFFF00;
+  /* Yellow color */
 }
 
 .navbar-brand {
- 
+
   color: #FFFF00;
-  
+
 }
+
 .nav-link:hover {
   color: #FFFF00;
+}
+
+.background-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.background-image {
+  background-image: url(../images/Band/Banner1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  animation: scaleAnimation 5s ease-in-out ;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1); /* Start with normal size */
   }
+  50% {
+    transform: scale(1.2); /* Scale up to 1.2 times original size */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+.welcome-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFF00; /* Yellow color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-text-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.welcome-text-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.newsletter-form label {
+  margin-bottom: 5px;
+}
+
+.newsletter-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  background-color: #FFFF00;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+}
+
+/* .container h2{
+  margin-top: 100px;
+} */
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.album {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.album img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.rating {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+
+.btn-view-tracks {
+  background-color: #FFFF00; /* Yellow color */
+  border-color: #FFFF00; /* Border color same as background for consistency */
+  color: #000000;
+}
+
+.btn-view-tracks:hover {
+  background-color: #FFD700; /* Darker yellow on hover */
+  border-color: #FFD700;
+  
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.quick-links,
+.social-media {
+  margin-right: 20px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p,
+.quick-links ul,
+.social-icons a {
+  color: #ccc;
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.quick-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #fff;
+}
+
+.social-media .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .contact-info,
+  .quick-links,
+  .social-media {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .background-image {
+    background-image: none;
+    /* Hide the image */
+    background-color: black;
+    /* Add black background color */
+  }
+}

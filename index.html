@@ -10,6 +10,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+  <!-- FancyBox JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <!-- FancyBox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
   <!-- My CSS Script-->
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -42,15 +48,16 @@
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
+            <li class="nav-item"><a class="nav-link" href="bandmembers.html">Band Members</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Media</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Bookings</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Merchandise</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Shows</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Albums</a>
-            </li>
-           
             <li class="nav-item"><a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
@@ -62,8 +69,291 @@
   <!-- Navigation End-->
   </section>
 
+  <section class="welcome-section">
+    <div class="background-container">
+      <div class="background-image"></div>
+      <div class="welcome-text-container">
+        <h1>Welcome to Twisties Band</h1>
+        <p>Feel the rhythm, experience the magic!</p>
+        <!-- Newsletter Subscription Form -->
+        <form class="newsletter-form" onsubmit="return showSuccessToast();">
+          <label for="email">Subscribe to our newsletter:</label>
+          <input type="email" id="email" name="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
 
+  <section>
+    <div class="container">
+      <h2>Albums and Ratings</h2>
+
+      <div class="album-grid">
+        <!-- Album s -->
+        <div class="album">
+          <img src="assets/images/Band/selense.jpg" alt="An image of Selense Album Cover">
+          <h3>Selense</h3>
+          <p class="rating">Fan Rating: 4.5/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal">View
+            Tracks</button>
+        </div>
+
+
+        <div class="album">
+          <img src="assets/images/Band/Loveandhighlife.jpg" alt="An image of love and Highlife's Album Cover">
+          <h3>Love and Highlife</h3>
+          <p class="rating">Fan Rating: 4.2/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+
+        </div>
+        <div class="album">
+          <img src="assets/images/Band/Back2back.jpeg" alt="An image of Selense Album Cover">
+          <h3>Back 2 Back</h3>
+          <p class="rating">Fan Rating: 4.5/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+
+        <div class="album">
+          <img src="assets/images/Band/danceyourdance.jpg" alt="An image of love and Highlife's Album Cover">
+          <h3>Dance your Dance</h3>
+          <p class="rating">Fan Rating: 4.2/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+        <div class="album">
+          <img src="assets/images/Band/Osondu.jpeg" alt="An image of Selense Album Cover">
+          <h3>Osondu</h3>
+          <p class="rating">Fan Rating: 4.5/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+
+        <div class="album">
+          <img src="assets/images/Band/Wakeup.jpg" alt="An image of love and Highlife's Album Cover">
+          <h3>Wake up</h3>
+          <p class="rating">Fan Rating: 4.2/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+        <div class="album">
+          <img src="assets/images/Band/dance for me.jpg" alt="An image of Selense Album Cover">
+          <h3>Dance 4 Me</h3>
+          <p class="rating">Fan Rating: 4.5/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+
+        <div class="album">
+          <img src="assets/images/Band/whonogo.jpg" alt="An image of love and Highlife's Album Cover">
+          <h3>Whonogo</h3>
+          <p class="rating">Fan Rating: 4.2/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+        <div class="album">
+          <img src="assets/images/Band/selense.jpg" alt="An image of Selense Album Cover">
+          <h3>Selense</h3>
+          <p class="rating">Fan Rating: 4.5/5</p>
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#selenseModal">View
+            Tracks</button>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+    <!-- Modal for Viewing Tracks -->
+<div class="modal fade" id="viewTracksModal" tabindex="-1" aria-labelledby="viewTracksModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewTracksModalLabel">View Tracks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <!-- Add each song as a list item with a play button -->
+          <li class="list-group-item">
+            <button class="btn btn-primary btn-play" onclick="changeTrack('path-to-song-1.mp3', 'Song 1')">Play</button>
+            Song 1
+          </li>
+          <li class="list-group-item">
+            <button class="btn btn-primary btn-play" onclick="changeTrack('path-to-song-2.mp3', 'Song 2')">Play</button>
+            Song 2
+          </li>
+          <!-- Add more songs as needed -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+
+
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Photo Gallery</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A1.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+            <img src="assets/images/Band/A1.jpg" class="img-fluid" alt="Image 1">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+            <img src="assets/images/Band/A3.jpg" class="img-fluid" alt="Image 2">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A2.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+            <img src="assets/images/Band/A2.jpg" class="img-fluid" alt="Image 2">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/a4.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A5.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='#'>Joseph Omotoyosi</a>">
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h4>Contact Us</h4>
+          <p>Email: info@twistiesband.com</p>
+          <p>Phone: +1 (555) 123-4567</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Band Members</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+          <h4>Connect with Us</h4>
+          <div class="social-icons">
+            <!-- Add your social media icons and links here -->
+            <a href="#" target="_blank" title="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" title="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" title="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Toast -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Subscription Successful</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Thank you for subscribing!
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function changeTrack(src, title) {
+      var audioPlayer = document.getElementById('albumPlayer');
+      var currentTrack = document.getElementById('currentTrack');
+
+      // Change the source and title
+      currentTrack.src = src;
+      audioPlayer.load(); // Reload the audio player to apply changes
+      audioPlayer.play(); // Automatically start playing the new track
+    }
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      // Initialize FancyBox
+      $('[data-fancybox="gallery"]').fancybox({
+        // Add any additional options as needed
+      });
+    });
+  </script>
+
+  <script>
+    function showSuccessToast() {
+      var emailInput = document.getElementById('email');
+      var email = emailInput.value.trim();
+
+      // Basic email validation
+      if (!isValidEmail(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      // Display success toast
+      var toast = new bootstrap.Toast(document.getElementById('toast'));
+      toast.show();
+
+      // Clear the form
+      emailInput.value = '';
+
+      return false; // Prevent form submission for demonstration purposes
+    }
+
+    function isValidEmail(email) {
+      // Basic email validation using a regular expression
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
 
   <!-- Bootstrap  JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
