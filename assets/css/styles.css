@@ -158,6 +158,26 @@
   
 }
 
+.btn-buy {
+  background-color: black;
+  color: white;
+}
+
+.btn-buy:hover {
+  background-color: #656720; /* Darker color on hover */
+}
+
+#modalAlbumArt {
+  max-width: 100%;  /* Adjust the maximum width as needed */
+  max-height: 300px; /* Adjust the maximum height as needed */
+  width: auto;
+  height: auto;
+}
+#purchaseModal img {
+  max-width: 30%; /* Set the maximum width to 100% of the parent container */
+  height: auto;    /* Maintain the aspect ratio */
+}
+
 /* Footer Styles */
 footer {
   background-color: #333;
