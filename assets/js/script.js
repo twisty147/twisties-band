@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
       // Get the album details from the data attributes
       var albumName = button.getAttribute('data-album-name');
       var albumArt = button.getAttribute('data-album-art');
-      var albumDescription = button.getAttribute('data-album-description');
+      // var albumDescription = button.getAttribute('data-album-description');
 
       // Update the modal title with the album name
       var modalTitle = document.getElementById('viewTracksModalLabel');
       modalTitle.textContent = 'Album Name - ' + albumName;
 
       // Update the album art in the modal
+      var albumName = button.getAttribute('data-album-name');
       var modalAlbumArt = document.getElementById('modalAlbumArt');
       console.log(albumArt);  // Add this line for debugging
       modalAlbumArt.src = albumArt;
@@ -23,9 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
  // Function to set album art and open the purchase modal
- function openPurchaseModal(albumArt) {
+ function openPurchaseModal(albumArt, albumName) {
   // Set the album art dynamically
   document.getElementById('purchaseAlbumArt').src = albumArt;
+  
   // Open the purchase modal
   $('#purchaseModal').modal('show');
 }
