@@ -1,0 +1,106 @@
+.bandMembersbackground-image {
+    background-image: url(../images/Band/Banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    animation: scaleAnimation 5s ease-in-out ;
+  }
+  
+  .bandbackground-container {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .bandwelcome-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFF00; /* Yellow color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .bookbutton {
+    padding: 10px;
+    background-color: #FFFF00;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+    
+  }
+
+  /*  The Band Section */
+#band {
+    padding: 50px 0;
+}
+
+#band h3 {
+    color: #282727;
+}
+
+#band p {
+    color: #555;
+}
+
+#band article {
+    text-align: left;
+}
+
+#band img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style for the sidebar */
+#band .col-md-4 {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#band .col-md-4 h5 {
+    color: #333;
+}
+
+#band .col-md-4 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#band .col-md-4 ul li {
+    margin-bottom: 10px;
+}
+
+#band .col-md-4 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    #band .col-md-8 {
+        margin-bottom: 20px;
+    }
+    
+    #band .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+#backToTopBtn {
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#backToTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+}
