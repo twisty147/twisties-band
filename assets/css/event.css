@@ -1,0 +1,164 @@
+body {
+    background-color: #f8f8f8; 
+    color: #141313;
+  }
+  .event-container {
+    max-width: 600px !important;
+    margin: 80px auto !important;
+  }
+  .contactContainer{
+    max-width: 1200px !important;
+    margin: 80px auto !important;
+  }
+
+  }
+  .event-card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color:white;
+  }
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .event-details {
+    padding: 20px;
+  }
+  .btn-primary {
+    background-color: #040404; /* Yellow button color */
+    border-color: #ffc107; /* Yellow button border color */
+  }
+  .btn-primary:hover {
+    background-color: #ffca2b; /* Darker yellow on hover */
+    border-color: #ffca2b; /* Darker yellow on hover */
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: #FFFF00; /* Yellow color */
+  }
+  
+  .navbar-brand {
+    color: #FFFF00; /* Yellow color */
+  }
+  
+  .nav-link:hover {
+    color: #FFFF00; /* Yellow color on hover */
+  }
+
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show {
+    color: #FFFF00; /* Yellow color */
+  }
+
+
+ /* Add these styles to your existing CSS file or create a new one */
+
+/* Style for the modal body */
+#buyTicketModal .modal-body {
+    text-align: center;
+}
+
+/* Style for the form inside the modal */
+#buyTicketModal form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style for the form inputs */
+#buyTicketModal .form-control {
+    margin-bottom: 15px;
+}
+
+/* Style for the modal footer */
+#buyTicketModal .modal-footer {
+    justify-content: space-between;
+}
+
+/* Optional: Add some background color to the modal header and footer */
+#buyTicketModal .modal-header,
+#buyTicketModal .modal-footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Optional: Add some padding to the modal header and footer */
+#buyTicketModal .modal-header,
+#buyTicketModal .modal-footer,
+#buyTicketModal .modal-body {
+    padding: 15px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.quick-links,
+.social-media {
+  margin-right: 20px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p,
+.quick-links ul,
+.social-icons a {
+  color: #ccc;
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.quick-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #fff;
+}
+
+.social-media .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* .copyright {
+  margin-top: 20px;
+} */
+
+/*Band members */

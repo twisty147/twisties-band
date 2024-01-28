@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Twisties Band - Official Website</title>
   <!-- Bootstrap  CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,11 +14,13 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <!-- FancyBox CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
 
   <!-- My CSS Script-->
   <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Adding font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -53,15 +55,11 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="bandmembers.html">Band Members</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Media</a>
+            <li class="nav-item"><a class="nav-link" href="media.html">Media</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Events</a>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Bookings</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Merchandise</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
 
@@ -70,14 +68,15 @@
     </div>
   </nav>
   <!-- Navigation End-->
-  </section>
 
+  <!-- Welcome Message-->
   <section class="welcome-section">
     <div class="background-container">
       <div class="background-image"></div>
       <div class="welcome-text-container">
-        <h1>Welcome to Twisties Band</h1>
+        <h1>Official Website of Twisties Band</h1>
         <p>Feel the rhythm, experience the magic!</p>
+
         <!-- Newsletter Subscription Form -->
         <form class="newsletter-form" onsubmit="return showSuccessToast();">
           <label for="email">Subscribe to our newsletter:</label>
@@ -86,12 +85,16 @@
         </form>
       </div>
     </div>
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-down-indicator">
+      <div class="mouse-icon"></div>
+    </div>
   </section>
 
-<!--Album's Section-->
+  <!--Album's Section-->
   <section>
-    <div class="container" >
-      
+    <div class="container">
+
       <h2 class="text-center mb-4">Albums and Ratings</h2>
 
       <div class="album-grid mx-auto">
@@ -100,13 +103,15 @@
           <img src="assets/images/Band/selense.jpg" alt="An image of Selense Album Cover">
           <h3>Selense</h3>
           <p class="rating">Fan Rating: 4.5/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Selense"  
-          data-album-art="assets/images/Band/selense.jpg"
-          >View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Selense" data-album-art="assets/images/Band/selense.jpg" data-songs='[
+            {"name": "Selense", "path": "assets/Music/selense.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}
+          ]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/selense.jpg" data-album-name="Selense" onclick="openPurchaseModal('assets/images/Band/selense.jpg', 'Selense')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/selense.jpg" data-album-name="Selense"
+            onclick="openPurchaseModal('assets/images/Band/selense.jpg', 'Selense')">Buy Now</button>
         </div>
 
 
@@ -114,24 +119,30 @@
           <img src="assets/images/Band/Loveandhighlife.jpg" alt="An image of love and Highlife's Album Cover">
           <h3>Love and Highlife</h3>
           <p class="rating">Fan Rating: 4.2/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Love and Highlife"
-          data-album-art="assets/images/Band/Loveandhighlife.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Love and Highlife" data-album-art="assets/images/Band/Loveandhighlife.jpg" data-songs='[
+            {"name": "Love&Highlife", "path": "assets/Music/Loveandhighlife.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}
+          ]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/Loveandhighlife.jpg"onclick="openPurchaseModal('assets/images/Band/Loveandhighlife.jpg')">Buy Now</button>
-            
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/Loveandhighlife.jpg"
+            onclick="openPurchaseModal('assets/images/Band/Loveandhighlife.jpg')">Buy Now</button>
+
         </div>
         <div class="album">
           <img src="assets/images/Band/Back2back.jpeg" alt="An image of Selense Album Cover">
           <h3>Back 2 Back</h3>
           <p class="rating">Fan Rating: 4.5/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Back 2 Back"
-          data-album-art="assets/images/Band/Back2back.jpeg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Back 2 Back" 
+            data-album-art="assets/images/Band/Back2back.jpeg" data-songs='[
+            {"name": "Back 2 Back", "path": "assets/Music/back2back.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/Back2back.jpeg"onclick="openPurchaseModal('assets/images/Band/Back2back.jpeg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/Back2back.jpeg"
+            onclick="openPurchaseModal('assets/images/Band/Back2back.jpeg')">Buy Now</button>
         </div>
 
 
@@ -139,24 +150,28 @@
           <img src="assets/images/Band/danceyourdance.jpg" alt="An image of love and Highlife's Album Cover">
           <h3>Dance your Dance</h3>
           <p class="rating">Fan Rating: 4.2/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Dance your Dance"
-          data-album-art="assets/images/Band/danceyourdance.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Dance your Dance" data-album-art="assets/images/Band/danceyourdance.jpg" data-songs='[
+            {"name": "DanceYourDance", "path": "assets/Music/danceyourdance.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/danceyourdance.jpg"onclick="openPurchaseModal('assets/images/Band/danceyourdance.jpg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/danceyourdance.jpg"
+            onclick="openPurchaseModal('assets/images/Band/danceyourdance.jpg')">Buy Now</button>
         </div>
 
         <div class="album">
           <img src="assets/images/Band/Osondu.jpeg" alt="An image of Selense Album Cover">
           <h3>Osondu</h3>
           <p class="rating">Fan Rating: 4.5/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Osondu"
-          data-album-art="assets/images/Band/Osondu.jpeg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Osondu" data-album-art="assets/images/Band/Osondu.jpeg" data-songs='[
+            {"name": "Osondu", "path": "assets/Music/Osondu.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/Osondu.jpeg"onclick="openPurchaseModal('assets/images/Band/Osondu.jpeg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/Osondu.jpeg"
+            onclick="openPurchaseModal('assets/images/Band/Osondu.jpeg')">Buy Now</button>
         </div>
 
 
@@ -164,23 +179,27 @@
           <img src="assets/images/Band/Wakeup.jpg" alt="An image of love and Highlife's Album Cover">
           <h3>Wake up</h3>
           <p class="rating">Fan Rating: 4.2/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Wake Up"
-          data-album-art="assets/images/Band/Wakeup.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Wake Up" data-album-art="assets/images/Band/Wakeup.jpg" data-songs='[
+            {"name": "Wake Up", "path": "assets/Music/wakeup.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/Wakeup.jpg"onclick="openPurchaseModal('assets/images/Band/Wakeup.jpg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/Wakeup.jpg"
+            onclick="openPurchaseModal('assets/images/Band/Wakeup.jpg')">Buy Now</button>
         </div>
         <div class="album">
-          <img src="assets/images/Band/dance for me.jpg" alt="An image of Selense Album Cover">
+          <img src="assets/images/Band/danceforme.jpg" alt="An image of Selense Album Cover">
           <h3>Dance 4 Me</h3>
           <p class="rating">Fan Rating: 4.5/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Dance 4 Me"
-          data-album-art="assets/images/Band/dance for me.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Dance 4 Me" data-album-art="assets/images/Band/danceforme.jpg" data-songs='[
+            {"name": "Dance 4 Me", "path": "assets/Music/dance4me.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/dance for me.jpg"onclick="openPurchaseModal('assets/images/Band/dance for me.jpg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/dance for me.jpg"
+            onclick="openPurchaseModal('assets/images/Band/dance for me.jpg')">Buy Now</button>
         </div>
 
 
@@ -188,24 +207,29 @@
           <img src="assets/images/Band/whonogo.jpg" alt="An image of love and Highlife's Album Cover">
           <h3>Whonogo</h3>
           <p class="rating">Fan Rating: 4.2/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Whonogo"
-          data-album-art="assets/images/Band/whonogo.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Whonogo" data-album-art="assets/images/Band/whonogo.jpg" data-songs='[
+            {"name": "Whonogo", "path": "assets/Music/Whonogo.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/whonogo.jpg"onclick="openPurchaseModal('assets/images/Band/whonogo.jpg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/whonogo.jpg"
+            onclick="openPurchaseModal('assets/images/Band/whonogo.jpg')">Buy Now</button>
         </div>
 
         <div class="album">
           <img src="assets/images/Band/selense.jpg" alt="An image of Selense Album Cover">
           <h3>Selense</h3>
           <p class="rating">Fan Rating: 4.5/5</p>
-          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"  
-          data-album-name="Selense"
-          data-album-art="assets/images/Band/selense.jpg">View
+          <button class="btn btn-primary btn-view-tracks" data-bs-toggle="modal" data-bs-target="#viewTracksModal"
+            data-album-name="Selense" data-album-art="assets/images/Band/selense.jpg" data-songs='[
+            {"name": "Selense", "path": "assets/Music/selense.mp3"},
+            {"name": "Song 2", "path": "path-to-song-2.mp3"}
+          ]'>View
             Tracks</button>
-            <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
-            data-album-art="assets/images/Band/selense.jpg"onclick="openPurchaseModal('assets/images/Band/selense.jpg')">Buy Now</button>
+          <button class="btn btn-success btn-buy" data-bs-target="#purchaseModal"
+            data-album-art="assets/images/Band/selense.jpg"
+            onclick="openPurchaseModal('assets/images/Band/selense.jpg')">Buy Now</button>
         </div>
 
 
@@ -213,18 +237,11 @@
 
       </div>
     </div>
+  </section>
+  <!--Album's Section End-->
 
-
-   
-
-
-
- 
-
-
-
-   <!-- Modal for Viewing Tracks -->
-   <div class="modal fade" id="viewTracksModal" tabindex="-1" aria-labelledby="viewTracksModalLabel" aria-hidden="true">
+  <!-- Modal for Viewing Tracks -->
+  <div class="modal fade" id="viewTracksModal" tabindex="-1" aria-labelledby="viewTracksModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -235,21 +252,18 @@
           <div class="row">
             <div class="col-md-6 text-center">
               <!-- Album Art -->
-              <img id="modalAlbumArt" src="" alt="Album Art">
+              <img id="modalAlbumArt" src="default.jpg" alt="Album Art">
               <p id="modalAlbumDescription"></p>
             </div>
             <div class="col-md-6">
+              <!-- Audio Player -->
+              <audio id="albumPlayer" controls>
+                <source id="currentTrack" src="default.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+
               <!-- Song List -->
-              <ul class="list-group">
-                <!-- Add each song as a list item with a play button -->
-                <li class="list-group-item">
-                  <button class="btn btn-primary btn-play" onclick="changeTrack('path-to-song-1.mp3', 'Song 1')">Play</button>
-                  Song 1
-                </li>
-                <li class="list-group-item">
-                  <button class="btn btn-primary btn-play" onclick="changeTrack('path-to-song-2.mp3', 'Song 2')">Play</button>
-                  Song 2
-                </li>
+              <ul id="songList" class="list-group">
                
               </ul>
             </div>
@@ -258,92 +272,100 @@
       </div>
     </div>
   </div>
-  </section>
+  <!-- Modal for Viewing Tracks  End-->
 
-<!-- Purchase Modal -->
-<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="purchaseModalLabel">Buy Album</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img id="purchaseAlbumArt" src="" alt="Album Art" class="img-fluid rounded mb-4 shadow">
-        <!-- <h5 id="purchaseAlbumTitle" class="mb-3">Album Title</h5> -->
-        <p class="text-muted lead">Price: £19.99</p>
-        <form id="purchaseForm" onsubmit="return validateForm()">
-          <div class="row mb-3">
-            <div class="col">
-              <label for="firstName" class="form-label visually-hidden">First Name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+  <!-- Purchase Modal -->
+  <div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseModalLabel">Buy Album</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="purchaseAlbumArt" src="default.jpg" alt="Album Art" class="img-fluid rounded mb-4 shadow">
+         
+          <p class="text-muted lead">Price: £19.99</p>
+          <form id="purchaseForm" onsubmit="return validateForm()">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="firstName" class="form-label visually-hidden">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+              </div>
+              <div class="col">
+                <label for="lastName" class="form-label visually-hidden">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+              </div>
             </div>
-            <div class="col">
-              <label for="lastName" class="form-label visually-hidden">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            <div class="mb-3">
+              <label for="address" class="form-label visually-hidden">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="Address" required>
             </div>
-          </div>
-          <div class="mb-3">
-            <label for="address" class="form-label visually-hidden">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="Address" required>
-          </div>
-          <div class="mb-3">
-            <label for="phoneNumber" class="form-label visually-hidden">Phone Number</label>
-            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number" required>
-          </div>
-          <div class="mb-3">
-            <label for="creditCard" class="form-label visually-hidden">Credit Card Number</label>
-            <input type="text" class="form-control" id="creditCard" placeholder="Credit Card Number" required>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <label for="cvv" class="form-label visually-hidden">CVV</label>
-              <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label visually-hidden">Phone Number</label>
+              <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number" required>
             </div>
-          </div>
+            <div class="mb-3">
+              <label for="creditCard" class="form-label visually-hidden">Credit Card Number</label>
+              <input type="text" class="form-control" id="creditCard" placeholder="Credit Card Number" required>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="cvv" class="form-label visually-hidden">CVV</label>
+                <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Purchase</button>
-        </form>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Purchase</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- Purchase Modal End-->
 
-<!--Gallery Section-->
+  <!--Gallery Section-->
   <section class="gallery-section">
     <div class="container">
       <h2>Photo Gallery</h2>
 
       <div class="row">
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A1.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/A1.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
             <img src="assets/images/Band/A1.jpg" class="img-fluid" alt="Image 1">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
             <img src="assets/images/Band/A3.jpg" class="img-fluid" alt="Image 2">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A2.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/A2.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
             <img src="assets/images/Band/A2.jpg" class="img-fluid" alt="Image 2">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/a4.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/a4.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A5.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/A5.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
           </a>
         </div>
         <div class="col-md-4">
-          <a data-fancybox="gallery" href="assets/images/Band/A3.jpg" data-caption="<a href='bandmembers.html'>About band members</a>">
+          <a data-fancybox="gallery" href="assets/images/Band/banner2.jpg"
+            data-caption="<a href='bandmembers.html'>About band members</a>">
           </a>
         </div>
 
@@ -352,6 +374,7 @@
       </div>
     </div>
   </section>
+  <!--Gallery Section End-->
 
   <!-- Footer -->
   <footer>
@@ -360,7 +383,7 @@
         <!-- Contact Information -->
         <div class="contact-info">
           <h4>Contact Us</h4>
-          <p>Email: oamah1@yahoo.com</p>
+          <p>Email: info@twistiesband.com</p>
           <p>Phone: +44 7708719951</p>
         </div>
 
@@ -369,42 +392,45 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Band Members</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Bookings</a></li>
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="bandmembers.html">Band Members</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="events.html">Events</a></li>
+
+
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <!-- Social Media -->
+
         <div class="social-media">
           <h4>Connect with Us</h4>
           <div class="social-icons">
-            <!-- social media icons and links -->
-            <a href="#" target="_blank" title="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#" target="_blank" title="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#" target="_blank" title="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+            <!-- Font Awesome icons and links -->
+            <a href="https://www.facebook.com" target="_blank" title="Facebook"><i
+                class="fa fa-facebook-official"></i></a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
           </div>
         </div>
-      </div>
 
-      <!-- Copyright -->
-      <div class="copyright">
-        <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
+  <!-- Footer End-->
 
-
+  <!-- Adding Local javascript script-->
   <script src="assets/js/script.js" defer></script>
 
 
 
 
 
-  <!-- Bootstrap Toast for news letter subscription-->
+  <!-- Bootstrap Toast for newsletter subscription-->
   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
     <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
@@ -418,7 +444,7 @@
   </div>
 
 
-  
+
 
   <!-- Bootstrap  JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

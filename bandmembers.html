@@ -2,77 +2,210 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Twisties Band - Official Website</title>
     <!-- Bootstrap  CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- FancyBox JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <!-- FancyBox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
+    <!-- Adding font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- My CSS Script-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bandMembers.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-      <!-- Brand/logo and a toggle button for offcanvas navigation -->
-      <a class="navbar-brand" href="#">Twisties Band</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <!-- Brand/logo and a toggle button for offcanvas navigation -->
+            <a class="navbar-brand" href="#">Twisties Band</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <!-- Offcanvas navigation container -->
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Twisties Band</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+            <!-- Offcanvas navigation container -->
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Twisties Band</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- Offcanvas navigation body -->
+                <div class="offcanvas-body">
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="bandmembers.html">Band Members</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="media.html">Media</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a>
+                        </li>
+                        
+                        
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
-
-        <!-- Offcanvas navigation body -->
-        <div class="offcanvas-body">
-          <!-- Navigation links -->
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item"><a class="nav-link active" href="bandmembers.html">Band Members</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Media</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Events</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Bookings</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Merchandise</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigation End-->
-  </section>
-
-  <section class="">
+    </nav>
+    <!-- Navigation End-->
     
-  </section>
+    <section class="welcome-section">
+        <div class="bandbackground-container">
+            <div class="bandMembersbackground-image"></div>
+            <div class="bandwelcome-text-container">
+                <h1>Band Members</h1>
+                <p>Harmony Unleashed: Meet the Maestros Behind the Highlife Magic – Twisties Band Experience!"</p>
+                <button type="button" class="bookbutton " data-bs-toggle="modal" data-bs-target="#bookNowModal">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- (The Band Section) -->
+    <div id="band" class="container text-center">
+        <h3 class="mb-4">THE BAND</h3>
+        <p class="mb-4"><em>We love music!</em></p>
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <!--article -->
+                <article>
+                    <p class="lead">
+                        Twisties Band are a Nigerian Highlife band consisting of sibling duo
+                        Kingsley Okorie, a bassist and Benjamin James, a drummer. They were discovered by Lady Donli and
+                        are known for their live performances. They won the 2020 Headies Award for the Best Alternative
+                        Album. Twisties Band are natives of Orlu, Imo State and started out as choristers. Kingsley earned
+                        a law degree from Babcock University and Nigerian Law School's Kano campus. Benjamin however
+                        attended Peter King College of Music, Badagry, Lagos.
+
+                        
+                    </p>
 
 
+
+                    
+                    <div class="text-center mb-4">
+                        <img src="assets/images/Band/BandMembers/band2.jpg" alt="Image 1" class="img-fluid">
+                    </div>
+                    <h3 class="mb-4">Early Life</h3>
+                    <p class="lead">
+                        Twisties Band are natives of Orlu, Imo State and started out as choristers. Kingsley earned a law
+                        degree from Babcock University and Nigerian Law School's Kano campus. Benjamin however attended
+                        Peter King College of Music, Badagry, Lagos.
+
+                        Twisties Band were officially formed in March 2018 and they stylised their band name with an ie to
+                        avoid lawsuits from a New-Zealand artiste with the trademarked name.
+
+                    </p>
+
+
+
+                    
+                    <div class="text-center mb-4">
+                        <img src="assets/images/Band/BandMembers/Band1.jpg" alt="Image 2" class="img-fluid">
+                    </div>
+                    <h3 class="mb-4"> Career</h3>
+                    <p class="lead">
+                    
+
+                    They released their debut single, ''Osondu'' in 2020 and released their debut album, Roots in August
+                    2020. The album was recorded in their living room and was fully produced by the duo. They also
+                    produced 11 of the songs on Lady Donli's Enjoy Your Life album who in turn was a co-executive
+                    producer on Roots. They performed at the finale show of the fifth season of Big Brother Naija. The
+                    duo's sophomore album Love and Highlife was released in October 2021, with guest appearances from
+                    Cobhams Asuquo, Made Kuti, PC Lapez and Etuk Ubong, in 2023 the duo featured on Davido's Timeless
+                    album.
+                    </p>
+
+
+                    
+                    <div class="text-center mb-4">
+                        <img src="assets/images/Band/BandMembers/two.jpeg" alt="Image 3" class="img-fluid">
+                    </div>
+                </article>
+                
+            </div>
+
+            <!-- Sidebar with additional content -->
+            <div class="col-md-4">
+                
+
+
+                <div class="text-center mb-4">
+                    <h5>Advert</h5>
+                    <img src="assets/images/Band/BandMembers/Codeinstitute.jpg" alt="Sidebar Image" class="img-fluid">
+                </div>
+                <div class="mb-4">
+                    <h5>Related Articles</h5>
+
+                    <ul>
+                        <li><a href="https://www.withinnigeria.com/entertainment/2024/01/27/sunny-ade-is-not-your-uncle-nigerians-react-to-ayra-starrs-apology-to-highlife-and-juju-icon/">Sunny Ade is not your uncle</a></li>
+                        <li><a href="https://www.zikoko.com/pop/kings-of-highlife-music/">The 12 Nigerian Kings of Highlife Music</a></li>
+                        <li><a href="https://guardian.ng/life/cavemen-redefining-highlife-music/">CAVEMEN… REDEFINING HIGHLIFE MUSIC</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="backToTopBtn" class="position-fixed bottom-0 end-0 p-3" style="z-index: 5; display: block;">
+        <a href="#" class="btn  btn-warning">
+            <i class="fa fa-arrow-up"></i> Top
+        </a>
+    </div>
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookNowModal" tabindex="-1" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookNowModalLabel">Book Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Booking Form -->
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="bookingDate" class="form-label">Booking Date</label>
+                            <input type="date" class="form-control" id="bookingDate" name="bookingDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -82,99 +215,59 @@
                 <div class="contact-info">
                     <h4>Contact Us</h4>
                     <p>Email: info@twistiesband.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Phone: +44 7708719951</p>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="quick-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Band Members</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Bookings</a></li>
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bandmembers.html">Band Members</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="events.html">Events</a></li>
+                       
+                  
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Social Media -->
+
                 <div class="social-media">
                     <h4>Connect with Us</h4>
                     <div class="social-icons">
-                        <!-- Add your social media icons and links here -->
-                        <a href="#" target="_blank" title="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
-                        <a href="#" target="_blank" title="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
-                        <a href="#" target="_blank" title="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+                        <!-- Font Awesome icons and links -->
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i
+                                class="fa fa-facebook-official"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" title="Twitter"><i
+                                class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i
+                                class="fa fa-instagram"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Copyright -->
-            <div class="copyright">
-                <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap Toast -->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
-        <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Subscription Successful</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                Thank you for subscribing!
-            </div>
-        </div>
-    </div>
+   
 
 
 
 
-    <script>
-        $(document).ready(function () {
-            // Initialize FancyBox
-            $('[data-fancybox="gallery"]').fancybox({
-                // Add any additional options as needed
-            });
-        });
-    </script>
-
-    <script>
-        function showSuccessToast() {
-            var emailInput = document.getElementById('email');
-            var email = emailInput.value.trim();
-
-            // Basic email validation
-            if (!isValidEmail(email)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            // Display success toast
-            var toast = new bootstrap.Toast(document.getElementById('toast'));
-            toast.show();
-
-            // Clear the form
-            emailInput.value = '';
-
-            return false; // Prevent form submission for demonstration purposes
-        }
-
-        function isValidEmail(email) {
-            // Basic email validation using a regular expression
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    </script>
+    <script src="assets/js/bandMembers.js" defer></script>
 
     <!-- Bootstrap  JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

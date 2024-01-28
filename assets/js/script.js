@@ -1,27 +1,84 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Add click event listener to each "View Tracks" button
   var viewTracksButtons = document.querySelectorAll('.btn-view-tracks');
-  viewTracksButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      // Get the album details from the data attributes
-      var albumName = button.getAttribute('data-album-name');
-      var albumArt = button.getAttribute('data-album-art');
-      // var albumDescription = button.getAttribute('data-album-description');
+  var modalAlbumArt = document.getElementById('modalAlbumArt');
+  var modalAlbumDescription = document.getElementById('modalAlbumDescription');
+  var currentTrack = document.getElementById('currentTrack');
+  var albumPlayer = document.getElementById('albumPlayer');
+  var songList = document.getElementById('songList');
 
-      // Update the modal title with the album name
-      var modalTitle = document.getElementById('viewTracksModalLabel');
-      modalTitle.textContent = 'Album Name - ' + albumName;
+  viewTracksButtons.forEach(function (viewTracksButton) {
+      viewTracksButton.addEventListener('click', function () {
+          var albumName = viewTracksButton.getAttribute('data-album-name');
+          var albumArt = viewTracksButton.getAttribute('data-album-art');
+          var songs = JSON.parse(viewTracksButton.getAttribute('data-songs'));
 
-      // Update the album art in the modal
-      var albumName = button.getAttribute('data-album-name');
-      var modalAlbumArt = document.getElementById('modalAlbumArt');
-      console.log(albumArt);  // Add this line for debugging
-      modalAlbumArt.src = albumArt;
+          modalAlbumArt.src = albumArt;
+          modalAlbumDescription.textContent = albumName;
 
-     
-    });
+          // Clear existing song list
+          songList.innerHTML = '';
+
+          // Populate song list
+          songs.forEach(function (song) {
+              var listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+
+              // Create play button
+              var playButton = document.createElement('button');
+              playButton.textContent = 'Play';
+              playButton.className = 'btn btn-sm btn-success me-2';
+
+              // Add click event to play the selected song
+              playButton.addEventListener('click', function () {
+                  currentTrack.src = song.path;
+                  albumPlayer.load();
+                  albumPlayer.play();
+              });
+
+              // Create stop button
+              var stopButton = document.createElement('button');
+              stopButton.textContent = 'Stop';
+              stopButton.className = 'btn btn-sm btn-danger';
+
+              // Add click event to stop the music
+              stopButton.addEventListener('click', function () {
+                  albumPlayer.pause();
+              });
+
+              // Add play and stop buttons to the list item
+              listItem.appendChild(playButton);
+              listItem.appendChild(stopButton);
+
+              // Add song name to the list item
+              listItem.appendChild(document.createTextNode(' ' + song.name));
+
+              // Add list item to the song list
+              songList.appendChild(listItem);
+          });
+      });
+  });
+
+  // Handle modal close event
+  var closeModalButton = document.querySelector('[data-bs-dismiss="modal"]');
+  closeModalButton.addEventListener('click', function () {
+      albumPlayer.pause();
   });
 });
+
+function changeTrack(src, title) {
+  var audioPlayer = document.getElementById('audioPlayer');
+  audioPlayer.src = path;
+  // audioPlayer.play();
+
+  var audioPlayer = document.getElementById('albumPlayer');
+  var currentTrack = document.getElementById('currentTrack');
+
+  // source and title
+  currentTrack.src = src;
+  audioPlayer.load(); // Reload the audio player to apply changes
+  audioPlayer.play(); // Automatically start playing the new track
+}
+
 
  // Function to set album art and open the purchase modal
  function openPurchaseModal(albumArt, albumName) {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+
+    <!-- Bootstrap  CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- My CSS Script-->
+    <link rel="stylesheet" href="assets/css/event.css">
+
+
+
+    <!-- Adding font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar with dark styling, fixed at the top -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+
+            <!-- Brand/logo and a toggle button for offcanvas navigation -->
+            <!-- <img src="assets/images/Band/twistiesBand.svg" alt="Twisties Band Logo" width="24" height="24"> -->
+            <a class="navbar-brand" href="#">Twisties Band</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas navigation container -->
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <!-- SVG icon before the title -->
+                    <img src="assets/images/Band/twistiesBand.svg" alt="Twisties Band Logo" width="24" height="24">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Twisties Band</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- Offcanvas navigation body -->
+                <div class="offcanvas-body">
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="bandmembers.html">Band Members</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link " href="media.html">Media</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Events</a>
+                        </li>
+
+                       
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation End-->
+
+
+    <div class="container event-container">
+        <h1 class="text-center mb-4">Upcoming Events</h1>
+
+        <div class="card event-card">
+            <img src="assets/images/Events/event1.jpg" alt="Event 1" class="card-img-top event-image">
+            <div class="card-body event-details">
+                <h5 class="card-title">AfroManiac</h5>
+                <p class="card-text">Date: March 15, 2024</p>
+                <p class="card-text">Location: O2 Arena</p>
+                
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyTicketModal" onclick="openTicketModal('AfroManiac', 'O2 Arena', 'March 15, 2024', 'assets/images/Events/event1.jpg')">
+                Buy Tickets
+            </button>
+        </div>
+
+        <div class="card event-card">
+            <img src="assets/images/Events/event2.jpg" alt="Event 2" class="card-img-top event-image">
+            <div class="card-body event-details">
+                <h5 class="card-title">Major Canton</h5>
+                <p class="card-text">Date: April 5, 2024</p>
+                <p class="card-text">Location: Manchester Stadium</p>
+                
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyTicketModal"
+                 onclick="openTicketModal('Major Canton', 'Manchester Stadium', 'April 5, 2024', 'assets/images/Events/event2.jpg')">
+                    Buy Tickets
+                </button>
+        </div>
+
+        <div class="card event-card">
+            <img src="assets/images/Events/event3.jpg" alt="Event 2" class="card-img-top event-image">
+            <div class="card-body event-details">
+                <h5 class="card-title">Revolution</h5>
+                <p class="card-text">Date: May 5, 2024</p>
+                <p class="card-text">Location: Swansea Stadium</p>
+                
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyTicketModal"
+            onclick="openTicketModal('Revolution', 'Swansea Stadium', 'May 5, 2024', 'assets/images/Events/event3.jpg')">
+               Buy Tickets
+           </button>
+        </div>
+
+        <div class="card event-card">
+            <img src="assets/images/Events/event4.jpg" alt="Event 2" class="card-img-top event-image">
+            <div class="card-body event-details">
+                <h5 class="card-title">Major Canton</h5>
+                <p class="card-text">Date: June 5, 2024</p>
+                <p class="card-text">Location: Emirate Stadium</p>
+              
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyTicketModal"
+            onclick="openTicketModal('Revolution', 'Swansea Stadium', 'May 5, 2024', 'assets/images/Events/event3.jpg')">
+               Buy Tickets
+           </button>
+        </div>
+
+        <div class="card event-card">
+            <img src="assets/images/Events/event2.jpg" alt="Event 2" class="card-img-top event-image">
+            <div class="card-body event-details">
+              <h5 class="card-title">Major Canton</h5>
+              <p class="card-text">Date: July 5, 2024</p>
+              <p class="card-text">Location: O2 Arena</p>
+              
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyTicketModal"
+            onclick="openTicketModal('Revolution', 'Swansea Stadium', 'May 5, 2024', 'assets/images/Events/event3.jpg')">
+               Buy Tickets
+           </button>
+          </div>
+      </div>
+
+    
+
+
+    <!--BUY Event Ticket Modal -->
+    <div class="modal fade" id="buyTicketModal" tabindex="-1" role="dialog" aria-labelledby="buyTicketModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyTicketModalLabel">Buy Tickets</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Dynamic content will be inserted here using JavaScript -->
+                    <img id="modalEventImage" src="default.jpg" class="img-fluid" alt="Event Image">
+                    <h5 id="modalEventName">.</h5>
+                    <p id="modalEventVenue">.</p>
+                    <p id="modalEventDate">.</p>
+    
+                    <!-- Form for user input -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputExpiration" class="form-label">Expiration Date</label>
+                            <input type="text" class="form-control" id="inputExpiration" placeholder="MM/YY" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCVV" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="inputCVV" placeholder="123" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- Add your ticket purchase logic or link here -->
+                    <button type="button" class="btn btn-primary" onclick="purchaseTickets()">Purchase Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+
+      <script>
+        function openTicketModal(eventName, venue, date, imagePath) {
+    // Set modal content dynamically
+    document.getElementById('modalEventImage').src = imagePath;
+    document.getElementById('modalEventName').innerText = eventName;
+    document.getElementById('modalEventVenue').innerText = 'Venue: ' + venue;
+    document.getElementById('modalEventDate').innerText = 'Date: ' + date;
+  }
+      </script>
+    <!-- <script src="assets/js/event.js"></script> -->
+
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h4>Contact Us</h4>
+          <p>Email: info@twistiesband.com</p>
+          <p>Phone: +44 7708719951</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bandmembers.html">Band Members</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="#">Events</a></li>
+          
+            
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+
+        <div class="social-media">
+          <h4>Connect with Us</h4>
+          <div class="social-icons">
+            <!-- Font Awesome icons and links -->
+            <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>&copy; 2024 Twisties Band. All rights reserved.</p>
+        </div>
+      </div>
+      </div>
+  </footer>
+  <!-- Footer End-->
+</body>
+
+</html>
