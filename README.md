@@ -106,6 +106,8 @@ The html and CSS for Twisties Band's website was tested using the W3C Markup Val
 ![Concert Poster](assets/images/testingcss2.png)
 
 ## Credits 
+codeinstitute:
+for the initial template used to setup the enviroment template 
 Bootstrap:
 For providing a responsive grid system, components, and styles that contribute to the overall layout and design of the website.
 
