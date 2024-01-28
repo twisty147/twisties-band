@@ -38,7 +38,7 @@ The choice of colors for the Twisties Band's website is crucial for shaping the 
 
 ### Nav Bar
 The navigation bar provides a user-friendly way to navigate through different sections of the website.
-![Nav Bar](images/nav_bar_logo.png)
+![Nav Bar](assets/images/nav.png)
 
 ### Album Gallery
 Showcasing the band's music albums, along with album covers, titles, and fan ratings.
